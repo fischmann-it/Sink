@@ -21,7 +21,56 @@ const { hasUpdate, currentVersion, latestVersion } = useVersionCheck()
                 : 'items-center justify-between',
             ]"
           >
-            
+            <div class="flex items-center">
+              <TooltipProvider>
+                <Tooltip :delay-duration="100">
+                  <TooltipTrigger as-child>
+                    <a
+                      :href="coffee"
+                      target="_blank"
+                      :title="$t('sidebar.coffee')"
+                      class="
+                        flex h-8 items-center justify-center rounded-md px-2
+                        hover:bg-sidebar-accent
+                        hover:text-sidebar-accent-foreground
+                      "
+                    >
+                      <Coffee class="size-4" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent :side="state === 'collapsed' ? 'right' : 'top'">
+                    <p>{{ $t('sidebar.coffee') }}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider v-if="hasUpdate">
+                <Tooltip :delay-duration="100">
+                  <TooltipTrigger as-child>
+                    <a
+                      href="https://github.com/ccbikai/Sink/releases"
+                      target="_blank"
+                      class="
+                        relative flex h-8 items-center justify-center rounded-md
+                        px-2
+                        hover:bg-sidebar-accent
+                        hover:text-sidebar-accent-foreground
+                      "
+                    >
+                      <ArrowUpCircle class="size-4" />
+                      <span
+                        class="
+                          absolute top-1 right-1 size-2 animate-pulse
+                          rounded-full bg-green-500
+                        "
+                      />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent :side="state === 'collapsed' ? 'right' : 'top'">
+                    <p>{{ $t('sidebar.update', { current: currentVersion, version: latestVersion }) }}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
 
             <div
