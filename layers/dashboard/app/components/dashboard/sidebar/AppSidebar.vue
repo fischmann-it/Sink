@@ -54,10 +54,10 @@ const settingsItems = computed<NavItem[]>(() => [
                 "
               >
                 <img
-                  src="/sink.png"
-                  :alt="title"
-                  class="size-8 rounded-full"
-                >
+  src="https://jobs.fischmann.it/images/logo.png"
+  :alt="title"
+  class="size-8 rounded-full"
+>
               </div>
               <div class="grid flex-1 text-left text-sm leading-tight">
                 <span class="truncate font-medium">{{ title }}</span>
