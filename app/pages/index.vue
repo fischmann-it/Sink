@@ -1,14 +1,3 @@
-#<template>
-#  <div class="flex flex-col justify-center">
-#    <HomeHero />
-#    <HomeLogos />
-#    <HomeFeatures />
-#    <HomeStats />
-#    <HomeTestimonials />
-#    <HomeCta />
-#  </div>
-#</template>
-
 <template>
   <div class="flex min-h-screen items-center justify-center bg-background">
     <div class="text-center">
