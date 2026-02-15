@@ -2,6 +2,10 @@
 definePageMeta({
   layout: false,
 })
+
+useHead({
+  title: 'bytely - Link Shortener from Fischmann.IT',
+})
 </script>
 
 <template>
