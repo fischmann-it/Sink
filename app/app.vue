@@ -5,14 +5,14 @@ const { title, description, image } = useAppConfig()
 const route = useRoute()
 
 useSeoMeta({
-  title: 'bytely - Link Shortener from Fischmann.IT',
+  title: `${title} - Link Shortener with Analytics`,
   description,
   ogType: 'website',
-  ogTitle: 'bytely',
-  ogSiteName: 'bytely',
+  ogTitle: title,
+  ogSiteName: title,
   ogDescription: description,
   ogImage: image,
-  twitterTitle: 'bytely',
+  twitterTitle: title,
   twitterDescription: description,
   twitterImage: image,
   twitterCard: 'summary_large_image',
@@ -20,7 +20,7 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: {
-    lang: 'de',
+    lang: 'en',
   },
   meta: [
     {
@@ -30,9 +30,17 @@ useHead({
   ],
   link: [
     {
+      rel: 'canonical',
+      href: computed(() => `https://sink.cool${route.path}`),
+    },
+    {
       rel: 'icon',
       type: 'image/png',
-      href: 'https://jobs.fischmann.it/images/logo.png',
+      href: '/icon-192.png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      href: '/apple-touch-icon.png',
     },
   ],
 })
