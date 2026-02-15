@@ -9,17 +9,17 @@ useHead({
 </script>
 
 <template>
-  <div class="flex min-h-screen items-center justify-center bg-background">
+  <div class="flex min-h-screen items-center justify-center bg-black dark">
     <div class="text-center space-y-8">
       <img
-        src="https://www.fischmann.it/wp-content/uploads/2025/06/FISCHMANN_SLOGAN_gross30-scaled.png"
+        src="https://jobs.fischmann.it/images/logo.png"
         alt="FISCHMANN.IT"
         class="mx-auto max-w-xs sm:max-w-sm"
       />
       <div>
         <NuxtLink
           to="/dashboard"
-          class="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+          class="inline-flex items-center rounded-md bg-white text-black px-6 py-3 text-sm font-medium hover:bg-gray-200"
         >
           Dashboard
         </NuxtLink>
