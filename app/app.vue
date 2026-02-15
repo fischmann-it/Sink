@@ -20,7 +20,7 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: {
-    lang: 'en',
+    lang: 'de',
   },
   meta: [
     {
